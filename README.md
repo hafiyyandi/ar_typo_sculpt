@@ -1,6 +1,8 @@
 # ar_typo_sculpt
 
 ## How the app works
+0. Setup: a server that serves default drawing commands from LeagueGothic-Regular.otf
+  * Based on (Allison's modify every glyph example) (https://editor.p5js.org/allison.parrish/sketches/SJwZn0wpQ)
 1. App is initialized
 2. Get device's location name, detect plane, check database
 3. Draw location name on top of detected plane using spheres & lines.
@@ -9,8 +11,8 @@
 6. VIEW MODE: the letters are drawn little by little using neon colored lights.
 
 ## Server (server.js)
-Server-side script (ttp://68.183.20.22:8080). Has 3 functionalities:
-1. Serve the default drawing commands of LeagueGothic.otf (/api/glyphs)
+Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
+1. Serve the default drawing commands of LeagueGothic-Regular.otf (/api/glyphs)
 2. Check if location name is already in database. If yes, send the record. (/api/coords)
 3. Save the translations of each point modified in the AR app (/api/save)
 
