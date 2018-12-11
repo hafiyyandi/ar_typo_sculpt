@@ -16,7 +16,8 @@ Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
 3. Save the translations of each point modified in the AR app (/api/save)
 
 ## Unity Scripts (C#)
-### characterLoader.cs (attached to an empty Game Object in the Scene)
+### characterLoader.cs
+(attached to an empty Game Object in the Scene)
 #### Start
 1. Get the default drawing commands from server.
 2. Get location (lat,lng) using Unity's Location service. Feed it into Google Maps Reverse Geocoding to get location's Name / Address.
@@ -38,11 +39,13 @@ Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
   * Instantiate LineRenderer for each point-pair.
   * For each point-pair, get points in between using Lerp. Cycle through the points in between.
   
-### sphereHit.cs (attached to an empty Game Object in the Scene)
+### sphereHit.cs
+(attached to an empty Game Object in the Scene)
 1. Raycast from point of touch
 2. If the ray hit an object tagged "sphere", call the function GetHit of the hit sphere.
 
-### sphereController.cs (attached to sphere prefab)
+### sphereController.cs
+(attached to sphere prefab)
 1. Once initialized, sphere stores:
   * detected plane's location
   * the index of the character
@@ -52,5 +55,6 @@ Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
 4. Parse the new coordinate, get translations for x,y,x to be stored in database. Formula : translations = current position - plane's position - default coordinate
 5. Upload translations to server (/api/save) along with location name & index of character within name string.
 
-### planeChecker.cs (attached to plane prefab) & planeCount.cs 
+### planeChecker.cs & planeCount.cs 
+(attached to plane prefab) 
 Basically just makes sure that the letters are only drawn on top of the first plane detected.
