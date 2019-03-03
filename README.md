@@ -1,5 +1,15 @@
 # ar_typo_sculpt
 
+![alt text](https://static.wixstatic.com/media/a544de_ca5cb00e2c244da7ae6d95275d24c115~mv2.png/v1/crop/x_121,y_96,w_816,h_577/fill/w_816,h_577,al_c,q_85/Principle.webp)
+![alt text](https://static.wixstatic.com/media/a544de_d8a4c983e47a41c1a2954d69b6d05d4b~mv2_d_2880_1800_s_2.png/v1/fill/w_724,h_448,al_c,q_80,usm_0.66_1.00_0.01/Screen%20Shot%202019-01-01%20at%204_40_24%20PM.webp)
+
+**What if graffiti was 3D and collaborative?**
+In TypeAR, users are able to create an AR Typographic sculpture that is unique to their current location.
+
+These sculptures are saved and synced to a database, so that:
+ * different users in the same location can collaborate on the sculpture, and
+ * users can come back on a different time and start from an already morphed sculpture.
+
 ## How the app works
 0. Setup: a server that serves default drawing commands from LeagueGothic-Regular.otf. Based on [Allison's modify every glyph example](https://editor.p5js.org/allison.parrish/sketches/SJwZn0wpQ)
 1. App is initialized
