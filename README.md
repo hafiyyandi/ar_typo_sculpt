@@ -15,16 +15,16 @@ These sculptures are saved and synced to a database, so that:
 0. Setup: a server that serves default drawing commands from LeagueGothic-Regular.otf. Based on [Allison's modify every glyph example](https://editor.p5js.org/allison.parrish/sketches/SJwZn0wpQ)
 1. App is initialized
 2. Get device's location name, detect plane, check database
-3. Draw location name on top of detected plane using spheres & lines.
-4. User can select a sphere and move it around the physical space via moving the device.
+3. Draw location name above a detected plane using spheres & lines.
+4. User can select a sphere/dot and move it around the physical space via moving the device.
 5. The app auto-saves each sphere new coordinate, specific to the location name. When the user or another user opens the app in the same space, they will see the previously morphed letterforms.
-6. VIEW MODE: the letters are drawn little by little using neon colored lights.
+6. VIEW MODE: the letters are drawn progressively using neon colored lights.
 
 ## Server ([server.js](https://github.com/hafiyyandi/ar_typo_sculpt/blob/master/server.js))
 Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
 1. Serve the default drawing commands of LeagueGothic-Regular.otf (/api/glyphs)
-2. Check if location name is already in database. If yes, send the record. (/api/coords)
-3. Save the translations of each point modified in the AR app (/api/save)
+2. Check if location name is already in database (in other word, if a sculpture already exists). If yes, send the record of the sculpture's coordinates. (/api/coords)
+3. Save the xyz-translations of each point modified in the AR app (/api/save)
 
 ## Unity Scripts (C#)
 ### [characterLoader.cs](https://github.com/hafiyyandi/ar_typo_sculpt/blob/master/Unity%20Scripts/characterLoader.cs)
@@ -69,4 +69,4 @@ Server-side script (http://68.183.20.22:8080). Has 3 functionalities:
 
 ### [planeChecker.cs](https://github.com/hafiyyandi/ar_typo_sculpt/blob/master/Unity%20Scripts/planeChecker.cs) & planeCount.cs 
 (attached to plane prefab) 
-Basically just makes sure that the letters are only drawn on top of the first plane detected.
+Basically just makes sure that the letters are only drawn above the first plane detected.
