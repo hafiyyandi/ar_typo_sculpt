@@ -2,7 +2,7 @@
 
 **What if graffiti was 3D and collaborative?**
 
-In TypeAR, users are able to create an AR Typographic sculpture that is unique to their current location.
+With this app, users are able to create an AR Typographic sculpture that is unique to their current location.
 
 These sculptures are saved and synced to a database, so that:
  * different users in the same location can collaborate on the sculpture, and
